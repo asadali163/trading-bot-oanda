@@ -2,7 +2,6 @@ from api.oanda_api import OandaAPI
 from infrastructure.instrument_collection import instrumentCollection
 # from exploration.plotting import CandlePlot
 from simulation.ma_cross import run_ma_sim
-# from constants.helper_fn import get_data
 from infrastructure.collect import get_data
 from constants.defs import curr_list, granularities
 from dateutil import parser
@@ -15,7 +14,7 @@ if __name__ == '__main__':
     instrumentCollection.LoadInstruments('./data')
     # stream_prices(['USD_JPY', 'EUR_USD'])
 
-    run_streamer()
+    # run_streamer()
 
     # dd = api.get_recent_candles("USD_JPY", "M5")
     # print(dd)
@@ -45,14 +44,15 @@ if __name__ == '__main__':
 
 
 
-    # dfr = "2020-01-01T00:00:00Z"
-    # dto = "2024-11-23T00:00:00Z"
-    # instrumentCollection.create_data_file(api, pair_name="USD_JPY", granularity="M1", count=1000, price="MBA", from_date=dfr, to_date=dto)
+    dfr = "2019-01-01T00:00:00Z"
+    dto = "2024-11-29T00:00:00Z"
+    # instrumentCollection.create_data_file(api, pair_name="BTC_USD", granularity="M30", price="MBA", from_date=dfr, to_date=dto)
 
     # data = api.get_instrument_candles("EUR_USD")
-    # instrumentCollection.create_data_file(api, pair_name="EUR_USD", granularity="H1", count=500)
+    # print(data)
+    # instrumentCollection.create_data_file(api, pair_name="XAU_USD", granularity="M15", count=50)
 
-    # get_data(instrumentCollection, api, curr_list, granularities, 1000)
+    # get_data(instrumentCollection, api, curr_list, granularities, from_date=dfr, to_date=dto)
 
 
     # instrumentCollection.CreateFile(api.get_account_instruments(), "./data")

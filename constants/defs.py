@@ -4,8 +4,8 @@ ID = "101-004-30368907-001"
 
 FINNHUB_API_KEY = "ct0tp61r01qkcukbibv0ct0tp61r01qkcukbibvg"
 
-curr_list = ["EUR", "USD", "JPY", "GBP", "AUD"]
-granularities = ["H1", "H4"]
+curr_list = ["EUR", "USD", "JPY", "GBP", "AUD", "XAU", "CHF", "CAD", "NZD"]
+granularities = ["M15", "M30", "H1"]
 
 CANDLE_COUNT = 4000
 

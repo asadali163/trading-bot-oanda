@@ -67,6 +67,7 @@ class InstrumentCollection():
             time_step = INCREMENTS[granularity]
 
             end_date = parser.parse(to_date)
+            # print("Here bai")
             from_date = parser.parse(from_date)
 
             candle_df = []

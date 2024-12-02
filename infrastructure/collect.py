@@ -22,9 +22,10 @@ def get_all_possible_pairs(pairs):
 
 
 
-def get_data(ins_collection, api, pairs, granularities, count, to_date=None, from_date=None,price="MBA"):
+def get_data(ins_collection, api, pairs, granularities, count=500, from_date=None, to_date=None, price="MBA"):
     possible_pairs = get_all_possible_pairs(pairs)
     for pair in possible_pairs:
         for granularity in granularities:
+            print("###### Getting data for pair: ", pair, " and granularity: ", granularity, " ######")
             # Collect data for all the ranges. Check the granularity and increament according 
-            ins_collection.create_data_file(api, pair_name=pair, granularity=granularity, count=count)
+            ins_collection.create_data_file(api, pair_name=pair, granularity=granularity, count=count, from_date=from_date, to_date=to_date)
